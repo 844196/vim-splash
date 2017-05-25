@@ -53,6 +53,7 @@ function! s:open_new_buffer()
   hide enew
   setlocal buftype=nofile nowrap nolist nonumber bufhidden=wipe
   setlocal nofoldenable
+  setlocal filetype=vim-splash
   let restore_command = bufnr == bufnr('%') ? 'enew' : bufnr . ' buffer'
   let restore_command .= ' | let &l:foldenable = ' . foldenable
   return restore_command
